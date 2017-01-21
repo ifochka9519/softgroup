@@ -1,0 +1,10 @@
+#hr{
+    float: right;
+    border: 2px black solid;
+    text-decoration: none;
+    background: green;
+    color: white;
+}
+#mn{
+    font-size: 50px;
+}

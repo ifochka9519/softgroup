@@ -1,0 +1,48 @@
+Name:Roma;
+Country:Italy;
+Founded:1927;
+President:James Pallotta;
+Revenue:220000500;
+Honours:35.
+Name:Manchester United;
+Country:England;
+Founded:1878;
+President:Joel and Avram Glazer;
+Revenue:333000500;
+Honours:84.
+Name:Dynamo;
+Country:Ukraine;
+Founded:1927;
+President:Ihor Surkis;
+Revenue:2500000;
+Honours:113.
+Name:Barcelona;
+Country:Spain;
+Founded:1899;
+President:Josep Maria Bartomeu;
+Revenue:500000000;
+Honours:89.
+Name:Shakhtar;
+Country:Ukraine;
+Founded:1936;
+President:Rinat Akhmetov;
+Revenue:23000000;
+Honours:33.
+Name:Real Madrid;
+Country:Spain;
+Founded:1902;
+President:Florentino Perez;
+Revenue:34390000;
+Honours:84.
+Name:Dnipro;
+Country:Ukraine;
+Founded:1918;
+President:Ihor Kolomoyskyi;
+Revenue:1000000;
+Honours:7.
+Name:Chelsea;
+Country:England;
+Founded:1905;
+President:Roman Abramovich;
+Revenue:55055005;
+Honours:30

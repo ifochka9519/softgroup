@@ -7,7 +7,7 @@ $new['Founded'] = ':'.$_POST['founded'].';';
 $new['President'] = ':'.$_POST['president'].';';
 $new['Revenue'] = ':'.$_POST['revenue'].';';
 $new['Honours'] = ':'.$_POST['honours'];
-$handle = fopen("myfile.txt", "a");
+$handle = fopen("myfile.txt", "a") or die ("Cannot open file!");
 fwrite($handle, ".");
 foreach ($new as $key => $value){
 	$key = PHP_EOL.$key;

@@ -2,7 +2,7 @@
 function make_array(){
 	$file = "myfile.txt";
 	$big_arr = [];
-	$handle = fopen($file, "r");
+	$handle = fopen($file, "r")  or die ("Cannot open file!");
 	$contents = fread($handle, filesize($file));
 	fclose($handle);
 	$arr = explode('.', $contents);

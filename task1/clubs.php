@@ -15,11 +15,11 @@
     <input type='submit' value='SORT ALL CLUBS' name='sort_btn' class="btn">
 </form>
 <br>
-<form action="ukr.php" method="post">
+<form action="ukr_result.php" method="post">
     <input type='submit' value='UKRANIAN CLUBS' name='ukr_btn' class="btn">
 </form>
 <?php
-require_once("func.php");
+require_once("make_array_function.php");
 $big_arr = make_array();
 require_once("show_array.php");
 shows($big_arr);

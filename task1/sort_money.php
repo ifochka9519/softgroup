@@ -10,7 +10,7 @@
 <body>
 <?php require_once ("header.php"); ?>
 	<?php
-	require_once ("func.php");
+	require_once("make_array_function.php");
 	$arr = make_array();
 
 	function cmp($a, $b){

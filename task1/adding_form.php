@@ -11,7 +11,7 @@
 <body>
     <?php require_once ("header.php"); ?>
 	<div id='newclub'>
-	<form action='add_club.php' onsubmit="return adds();" method="post" name='add_form'>
+	<form action='add_club_func.php' onsubmit="return adds();" method="post" name='add_form'>
 	<label for="name">Name</label><br>
 	<input type="text" name='name' id='name'><br>
 	<label for="country">Country</label><br>

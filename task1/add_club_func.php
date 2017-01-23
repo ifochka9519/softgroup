@@ -17,4 +17,4 @@ foreach ($new as $key => $value){
 fclose($handle);
 require_once ("header.php");
 ?>
-<a href="add.php" id="addd">ADD ONE MORE!</a>
+<a href="adding_form.php" id="addd">ADD ONE MORE!</a>

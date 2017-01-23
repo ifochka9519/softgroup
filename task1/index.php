@@ -11,18 +11,18 @@
 <body>
     <?php require_once ("header.php"); ?>
     <div id="form1">
-        <form action="fucn.php" method="post">
+        <form action="clubs.php" method="post">
             <input type="submit" name="show" id="show" value="ALL CLUBS">
         </form>
     </div>
     <div id="form3" >
-        <form action="searches.php" onsubmit="return searching();" method="post" name="sear" id="searchs">
+        <form action="searches_result.php" onsubmit="return searching();" method="post" name="sear" id="searchs">
             <input type="text" name="sumb" id="sumb"><br>
             <input  type="submit" name="add" id="srch" value="Search club">
         </form>
     </div>
     <div id="form2">
-        <form action="add.php" method="post">
+        <form action="adding_form.php" method="post">
             <input type="submit" name="add" id="add" value="ADD NEW CLUB">
         </form>
     </div>

@@ -13,7 +13,7 @@
 		$arr_big = [];
 		$good = false;
 		$smb = $_POST['sumb'];
-		require_once ("func.php");
+		require_once("make_array_function.php");
 		$arr = make_array();
 		foreach ($arr as $key => $value){
 			if(stripos($value['Name'], $smb)!== false) {

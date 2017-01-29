@@ -61,11 +61,12 @@ if(isset($_POST['newleague'])){
 	$arr = $stmt->fetch(PDO::FETCH_NUM);
 	$president = $arr[0];
 
+
 	$sql = "INSERT INTO leagues(name, id_country, top_place, id_president)
 			VALUES ('" . $_POST['name'] . "','"
 		. $country . "','"
 		. $_POST['top_place'] . "','"
-		. $president . "','".
+		. $president .
 		"')";
 	$result = $dbh->exec($sql);
 	header("Location: index.php");

@@ -9,25 +9,25 @@ $league = new League();
 $trophy = new Trophy();
 $stadium = new Stadium();
 if(isset($_POST['delete_club'])){
-	$sql = $club->delete_club($_POST['name']);
+	$sql = $club->delete_club($_POST['id']);
 	echo $sql;
 	$result = $dbh->exec($sql);
 	header("Location: index.php");
 }
 if(isset($_POST['delete_league'])){
-	$sql = $league->delete_league($_POST['name']);
+	$sql = $league->delete_league($_POST['id']);
 	echo $sql;
 	$result = $dbh->exec($sql);
 	header("Location: index.php");
 }
 if(isset($_POST['delete_stadium'])){
-	$sql = $stadium->delete_stadium($_POST['name']);
+	$sql = $stadium->delete_stadium($_POST['id']);
 	echo $sql;
 	$result = $dbh->exec($sql);
 	header("Location: index.php");
 }
 if(isset($_POST['delete_trophy'])){
-	$sql = $trophy->delete_trophy($_POST['name']);
+	$sql = $trophy->delete_trophy($_POST['id']);
 	echo $sql;
 	$result = $dbh->exec($sql);
 	header("Location: index.php");

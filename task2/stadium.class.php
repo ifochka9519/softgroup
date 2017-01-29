@@ -2,6 +2,7 @@
 
 class Stadium
 {
+	var $id;
 	var $name;
 	var $capacity;
 	var $city;
@@ -12,6 +13,7 @@ class Stadium
 	{
 
 		return "<form method='post' action='delete.php'>" .
+			"<input type=\"hidden\" name='id' id='id' value='".$this->id."'><br>".
 			'Name : ' .
 			"<input type=\"text\" name='name' id='name' value='" . $this->name . "'><br>" .
 			'Capacity : ' .
@@ -29,15 +31,15 @@ class Stadium
 
 	function show_all_stadium()
 	{
-		$sql = "SELECT stadiums.name AS name ,stadiums.year AS year , stadiums.capacity AS capacity, cities.name AS city
+		$sql = "SELECT stadiums.id as id, stadiums.name AS name ,stadiums.year AS year , stadiums.capacity AS capacity, cities.name AS city
   		FROM  stadiums, cities
   		WHERE stadiums.id_city = cities.id
   		";
 		return $sql;
 	}
-	function delete_stadium($name){
+	function delete_stadium($id){
 		$sql = "DELETE FROM stadiums
-				WHERE stadiums.name = '$name'";
+				WHERE stadiums.id = '$id'";
 		return $sql;
 	}
 }

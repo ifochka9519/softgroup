@@ -1,5 +1,6 @@
 <?php
 class League{
+	var $id;
 	var $name;
 	var $country;
 	var $president_f;
@@ -8,6 +9,7 @@ class League{
 
 	function __toString(){
 		return "<form method='post' action='delete.php'>".
+			"<input type=\"hidden\" name='id' id='id' value='".$this->id."'><br>".
 			'Name : '.
 			"<input type=\"text\" name='name' id='name' value='".$this->name."'><br>".
 			'Country : '.
@@ -23,15 +25,15 @@ class League{
 			//'Name : '.$this->name.';'."<br>".'Country : '.$this->country.';'."<br>".'President : '.$this->president_f.' '.$this->president_l.'.'."<br>";
 	}
 	function show_all_league(){
-		$sql = "SELECT leagues.name as name, countries.name as country, persone.first_name as president_f, persone.last_name as president_l
+		$sql = "SELECT leagues.id as id, leagues.name as name, countries.name as country, persone.first_name as president_f, persone.last_name as president_l
   		FROM  leagues, countries, persone
   		WHERE leagues.id_country = countries.id AND leagues.id_president = persone.id
   		";
 		return $sql;
 	}
-	function delete_league($name){
+	function delete_league($id){
 		$sql = "DELETE FROM leagues
-				WHERE leagues.name = '$name'";
+				WHERE leagues.id = '$id'";
 		return $sql;
 	}
 }

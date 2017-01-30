@@ -12,7 +12,7 @@ class Stadium
 	function __toString()
 	{
 
-		return "<form method='post' action='delete.php'>" .
+		return "<form method='post' action='property_delete.php'>" .
 			"<input type=\"hidden\" name='id' id='id' value='".$this->id."'><br>".
 			'Name : ' .
 			"<input type=\"text\" name='name' id='name' value='" . $this->name . "'><br>" .
@@ -22,6 +22,7 @@ class Stadium
 			"<input type=\"text\" name='city' id='city' value='" . $this->city . "'><br>" .
 			'Year : ' .
 			"<input type=\"text\" name='year' id='year' value='" . $this->year . "'><br>" .
+			"<input type=\"submit\" value='Clubs' id='stadium_club' name='stadium_club'><br><br>".
 			"<input type=\"submit\" value='Delete' id='delete_stadium' name='delete_stadium'>"
 			. "</form><br>";
 
@@ -34,6 +35,13 @@ class Stadium
 		$sql = "SELECT stadiums.id as id, stadiums.name AS name ,stadiums.year AS year , stadiums.capacity AS capacity, cities.name AS city
   		FROM  stadiums, cities
   		WHERE stadiums.id_city = cities.id
+  		";
+		return $sql;
+	}
+	function show_all_clubs($id){
+		$sql = "SELECT clubs.name as name
+  		FROM  clubs, stadiums
+  		WHERE stadiums.id = '$id' AND clubs.id_stadium = stadiums.id
   		";
 		return $sql;
 	}

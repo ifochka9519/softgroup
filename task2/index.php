@@ -25,6 +25,7 @@
 	$trophy = new Trophy();
 	$stadium = new Stadium();
 	if(isset($_POST['clubs'])) {
+	    echo ("<form method='post' action='sort.php'><input name='sort_club' type='submit' value='SORT'></form>");
 		$club->answ = '';
 		$stmt = $dbh->query($club->show_all_clubs());
 		$arr = $stmt->fetchAll(PDO::FETCH_CLASS, 'Club');
@@ -34,6 +35,7 @@
 		}
 	}
 	if(isset($_POST['league'])) {
+		echo ("<form method='post' action='sort.php'><input name='sort_league' type='submit' value='SORT'></form>");
 		$league->answ = '';
 		$stmt = $dbh->query($league->show_all_league());
 		$arr = $stmt->fetchAll(PDO::FETCH_CLASS, 'League');
@@ -43,6 +45,7 @@
 		}
 	}
 	if(isset($_POST['stadium'])) {
+		echo ("<form method='post' action='sort.php'><input name='sort_stadium' type='submit' value='SORT'></form>");
 		$stadium->answ = '';
 		$stmt = $dbh->query($stadium->show_all_stadium());
 		$arr = $stmt->fetchAll(PDO::FETCH_CLASS, 'Stadium');
@@ -52,6 +55,7 @@
 		}
 	}
 	if(isset($_POST['trophy'])) {
+		echo ("<form method='post' action='sort.php'><input name='sort_trophy' type='submit' value='SORT'></form>");
 		$trophy->answ = '';
 		$stmt = $dbh->query($trophy->show_all_trothy());
 		$arr = $stmt->fetchAll(PDO::FETCH_CLASS, 'Trophy');

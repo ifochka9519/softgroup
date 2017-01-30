@@ -4,6 +4,7 @@
 	<meta name="viewport"
 		  content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
 	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="js/main.js"></script>
 	<title>Football</title>
 </head>
 <body>
@@ -25,6 +26,12 @@
 	$trophy = new Trophy();
 	$stadium = new Stadium();
 	if(isset($_POST['clubs'])) {
+	    echo ("<div>
+        <form action=\"searches_result.php\" onsubmit=\"return searching();\" method=\"post\" name=\"sear\" id=\"searchs\">
+            <input type=\"text\" name=\"sumb\" id=\"sumb\"><br><br>
+            <input  type=\"submit\" name=\"search_club\" id=\"srch\" value=\"Search club\">
+        </form>
+    </div>");
 	    echo ("<form method='post' action='sort.php'><input name='sort_club' type='submit' value='SORT'></form>");
 		$club->answ = '';
 		$stmt = $dbh->query($club->show_all_clubs());
@@ -35,6 +42,12 @@
 		}
 	}
 	if(isset($_POST['league'])) {
+		echo ("<div>
+        <form action=\"searches_result.php\" onsubmit=\"return searching();\" method=\"post\" name=\"sear\" id=\"searchs\">
+            <input type=\"text\" name=\"sumb\" id=\"sumb\"><br><br>
+            <input  type=\"submit\" name=\"search_league\" id=\"srch\" value=\"Search league\">
+        </form>
+    </div>");
 		echo ("<form method='post' action='sort.php'><input name='sort_league' type='submit' value='SORT'></form>");
 		$league->answ = '';
 		$stmt = $dbh->query($league->show_all_league());
@@ -45,6 +58,12 @@
 		}
 	}
 	if(isset($_POST['stadium'])) {
+		echo ("<div>
+        <form action=\"searches_result.php\" onsubmit=\"return searching();\" method=\"post\" name=\"sear\" id=\"searchs\">
+            <input type=\"text\" name=\"sumb\" id=\"sumb\"><br><br>
+            <input  type=\"submit\" name=\"search_stadium\" id=\"srch\" value=\"Search stadium\">
+        </form>
+    </div>");
 		echo ("<form method='post' action='sort.php'><input name='sort_stadium' type='submit' value='SORT'></form>");
 		$stadium->answ = '';
 		$stmt = $dbh->query($stadium->show_all_stadium());
@@ -55,6 +74,12 @@
 		}
 	}
 	if(isset($_POST['trophy'])) {
+		echo ("<div>
+        <form action=\"searches_result.php\" onsubmit=\"return searching();\" method=\"post\" name=\"sear\" id=\"searchs\">
+            <input type=\"text\" name=\"sumb\" id=\"sumb\"><br><br>
+            <input  type=\"submit\" name=\"search_trophy\" id=\"srch\" value=\"Search trophy\">
+        </form>
+    </div>");
 		echo ("<form method='post' action='sort.php'><input name='sort_trophy' type='submit' value='SORT'></form>");
 		$trophy->answ = '';
 		$stmt = $dbh->query($trophy->show_all_trothy());

@@ -13,6 +13,14 @@ function srt(i, regs) {
     }
     return true;
 }
+function searching() {
+    var valid = true;
+    valid = empt('sumb', 'sumbol');
+    if(!valid) return valid;
+    valid = srt('sumb', '[^A-Za-z]+');
+    return valid;
+}
+
 function adds() {
     var valid = true;
     valid = empt('name', 'name');

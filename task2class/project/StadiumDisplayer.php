@@ -13,6 +13,22 @@ class StadiumDisplayer extends Display
 	}
 
 
+	public function getCityName(Stadium $s)
+	{
+		$this->db->select('cities.name');
+		$this->db->from('cities');
+		$this->db->condinition('cities.id', '=', $s->getIdCity());
+		return $this->exec()[0]['name'];
+	}
+
+	public function getClubs($id)
+	{
+		$this->db->select('clubs.name, clubs.year');
+		$this->db->from('clubs');
+		$this->db->condinition('clubs.id_stadium', '=', $id);
+		return $this->exec();
+	}
+
 
 
 

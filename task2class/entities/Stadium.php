@@ -9,8 +9,9 @@ class Stadium
 	private $_idCity;
 
 
-	public function __construct($arr)
+	public function __construct($arr = [])
 	{
+		if (!empty($arr)) {
 		foreach ($arr as $key=>$value){
 			if($key == 'id'){
 				$this->setId($value);
@@ -28,7 +29,8 @@ class Stadium
 				$this->setCapacity($value);
 			}
 
-		}
+		}}
+
 	}
 
 

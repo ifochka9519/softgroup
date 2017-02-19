@@ -6,6 +6,25 @@ class Trophy
 	private $_name;
 	private $_year;
 
+	public function __construct($arr = [])
+	{
+		if (!empty($arr)) {
+			foreach ($arr as $key => $value) {
+				if ($key == 'id') {
+					$this->setId($value);
+				}
+				if ($key == 'name') {
+					$this->setName($value);
+				}
+				if ($key == 'year') {
+					$this->setYear($value);
+				}
+
+
+			}
+		}
+	}
+
 
 	public function setYear($year)
 	{

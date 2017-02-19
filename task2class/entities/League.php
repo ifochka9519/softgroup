@@ -10,25 +10,27 @@ class League
 	private $_idPresident;
 
 
-	public function __construct($arr)
+	public function __construct($arr = [])
 	{
-		foreach ($arr as $key=>$value){
-			if($key == 'id'){
-				$this->setId($value);
-			}
-			if($key == 'name'){
-				$this->setName($value);
-			}
-			if($key == 'id_country'){
-				$this->setIdCountry($value);
-			}
-			if($key == 'top_place'){
-				$this->setTopPlace($value);
-			}
-			if($key == 'id_president'){
-				$this->setIdPresident($value);
-			}
+		if (!empty($arr)) {
+			foreach ($arr as $key => $value) {
+				if ($key == 'id') {
+					$this->setId($value);
+				}
+				if ($key == 'name') {
+					$this->setName($value);
+				}
+				if ($key == 'id_country') {
+					$this->setIdCountry($value);
+				}
+				if ($key == 'top_place') {
+					$this->setTopPlace($value);
+				}
+				if ($key == 'id_president') {
+					$this->setIdPresident($value);
+				}
 
+			}
 		}
 	}
 

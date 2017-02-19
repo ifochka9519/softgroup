@@ -7,13 +7,41 @@
 	<title>Football</title>
 </head>
 <body>
-<form action="view/clubs_view.php">
-	<input type="submit" value="ALL CLUBS">
+<form action="view/clubs_view.php" style="float: left; padding-right: 5px">
+	<input type="submit" value="ALL CLUBS" >
 </form>
 
-<form action="view/club_new.php">
+
+<form action="view/league_view.php" style="float: left; padding-right: 5px">
+    <input type="submit" value="ALL LEAGUES">
+</form>
+
+<form action="view/stadium_view.php" style="float: left; padding-right: 5px">
+    <input type="submit" value="ALL STADIUMS" >
+</form>
+
+<form action="view/trophy_view.php" >
+    <input type="submit" value="ALL TROPHY">
+</form>
+
+
+<form action="view/club_new.php" style="float: left; padding-right: 5px">
     <input type="submit" value="NEW CLUB">
 </form>
+
+<form action="view/league_new.php" style="float: left; padding-right: 5px">
+    <input type="submit" value="NEW LEAGUE">
+</form>
+
+<form action="view/stadium_new.php" style="float: left; padding-right: 5px" >
+    <input type="submit" value="NEW STADIUM">
+</form>
+
+<form action="view/trophy_new.php">
+    <input type="submit" value="NEW TROPHY">
+</form>
+
+
 
 </body>
 </html>

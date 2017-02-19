@@ -21,5 +21,6 @@ class Model
 	{
 		$querySql = $this->db->getSql();
 		$this->db->execA($querySql);
+		//var_dump($querySql);
 	}
 }

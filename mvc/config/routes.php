@@ -1,0 +1,31 @@
+<?php
+return array(
+	'default' => 'main/index',
+	'clubs/([0-9]+)/trophy' => 'clubs/trophy/$1',
+	'stadiums/([0-9]+)/clubs' => 'stadiums/clubs/$1',
+	'leagues/([0-9]+)/clubs' => 'leagues/clubs/$1',
+	'trophy/([0-9]+)/clubs' => 'trophy/clubs/$1',
+	'clubs/([0-9]+)/delete' => 'clubs/delete/$1',
+	'stadiums/([0-9]+)/delete' => 'stadiums/delete/$1',
+	'leagues/([0-9]+)/delete' => 'leagues/delete/$1',
+	'trophy/([0-9]+)/delete' => 'trophy/delete/$1',
+	'clubs/sort/([\w]+)' => 'clubs/index/sort/$1',
+	'stadiums/sort/([\w]+)' => 'stadiums/index/sort/$1',
+	'leagues/sort/([\w]+)' => 'leagues/index/sort/$1',
+	'trophy/sort/([\w]+)' => 'trophy/index/sort/$1',
+	'clubs/search\?sumbol=([\w]+)' => 'clubs/index/search/$1',
+	'stadiums/search\?sumbol=([\w]+)' => 'stadiums/index/search/$1',
+	'leagues/search\?sumbol=([\w]+)' => 'leagues/index/search/$1',
+	'trophy/search\?sumbol=([\w]+)' => 'trophy/index/search/$1',
+	'clubs/new' => 'clubs/new',
+	'stadiums/new' => 'stadiums/new',
+	'leagues/new' => 'leagues/new',
+	'trophy/new' => 'trophy/new',
+	'victory/new' => 'victory/new',
+	'victories' => 'victory/main',
+
+	'clubs' => 'clubs/index',
+	'stadiums' => 'stadiums/index',
+	'leagues' => 'leagues/index',
+	'trophy' => 'trophy/index'
+);
